@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_view_estimate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/pdf_page_heading_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/company_logo_view"
+                android:layout_width="247dp"
+                android:layout_height="206dp"
+                android:src="@drawable/company_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/company_name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/company_logo_view"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/calgary_store_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/calgary"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/company_name"
+                app:layout_constraintTop_toBottomOf="@id/company_name" />
+
+            <TextView
+                android:id="@+id/red_deer_store_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/red_deer"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/calgary_store_header"
+                app:layout_constraintTop_toBottomOf="@id/company_name" />
+
+            <TextView
+                android:id="@+id/calgary_address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/company_address"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/calgary_store_header"
+                app:layout_constraintTop_toBottomOf="@id/calgary_store_header" />
+
+            <TextView
+                android:id="@+id/calgary_address2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/calgary_postal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/calgary_store_header"
+                app:layout_constraintTop_toBottomOf="@id/calgary_address1" />
+
+            <TextView
+                android:id="@+id/calgary_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/calgary_phone_number"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/calgary_store_header"
+                app:layout_constraintTop_toBottomOf="@id/calgary_address2" />
+
+
+            <TextView
+                android:id="@+id/red_deer_address1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/red_deer_address"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/red_deer_store_header"
+                app:layout_constraintTop_toBottomOf="@id/red_deer_store_header" />
+
+            <TextView
+                android:id="@+id/red_deer_postal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/red_deer_postal"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/red_deer_store_header"
+                app:layout_constraintTop_toBottomOf="@id/red_deer_address1" />
+
+            <TextView
+                android:id="@+id/red_deer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/red_deer_phone"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/red_deer_store_header"
+                app:layout_constraintTop_toBottomOf="@id/red_deer_postal" />
+
+            <TextView
+                android:id="@+id/company_fax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/company_fax_number"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/calgary_phone"
+                app:layout_constraintTop_toBottomOf="@id/calgary_phone" />
+
+            <TextView
+                android:id="@+id/company_toll_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/company_toll_free"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/company_fax"
+                app:layout_constraintTop_toBottomOf="@id/company_fax" />
+
+            <TextView
+                android:id="@+id/company_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/company_email"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/company_fax"
+                app:layout_constraintTop_toBottomOf="@id/company_toll_free" />
+
+            <TextView
+                android:id="@+id/company_web"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/company_web_address"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/company_fax"
+                app:layout_constraintTop_toBottomOf="@id/company_email" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/customer_info_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/pdf_page_heading_section"
+            app:layout_constraintTop_toBottomOf="@id/pdf_page_heading_section">
+
+            <TextView
+                android:id="@+id/customer_info_job_id_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/job_number_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/estimate_job_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/customer_info_job_id_header"
+                app:layout_constraintTop_toTopOf="@id/customer_info_job_id_header" />
+
+            <TextView
+                android:id="@+id/install_date_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/install_date_header"
+                app:layout_constraintStart_toStartOf="@id/customer_info_job_id_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_job_id" />
+
+            <TextView
+                android:id="@+id/estimate_install_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/install_date_header"
+                app:layout_constraintTop_toTopOf="@id/install_date_header" />
+
+            <TextView
+                android:id="@+id/estimate_customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/install_date_header"
+                app:layout_constraintTop_toBottomOf="@id/install_date_header" />
+
+            <TextView
+                android:id="@+id/estimate_customer_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/customer_info_job_id_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_name" />
+
+            <TextView
+                android:id="@+id/estimate_customer_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="@id/customer_info_job_id_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_address" />
+
+            <TextView
+                android:id="@+id/estimate_customer_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@id/estimate_customer_city"
+                app:layout_constraintTop_toTopOf="@id/estimate_customer_city" />
+
+            <TextView
+                android:id="@+id/estimate_customer_postal_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/customer_info_job_id_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_city" />
+
+            <TextView
+                android:id="@+id/estimate_date_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="196dp"
+                android:text="@string/estimate_date"
+                app:layout_constraintStart_toEndOf="@id/estimate_install_date"
+                app:layout_constraintTop_toTopOf="@id/estimate_install_date" />
+
+            <TextView
+                android:id="@+id/estimate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/estimate_date_header"
+                app:layout_constraintTop_toTopOf="@id/estimate_date_header" />
+
+            <TextView
+                android:id="@+id/estimate_customer_home_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/estimate_date_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_date_header" />
+
+            <TextView
+                android:id="@+id/estimate_customer_bus_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/estimate_date_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_home_phone" />
+
+            <TextView
+                android:id="@+id/estimate_customer_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/estimate_date_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_bus_phone" />
+
+            <TextView
+                android:id="@+id/estimate_customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/estimate_date_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_mobile" />
+
+            <TextView
+                android:id="@+id/estimate_customer_job_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/install_date_header"
+                app:layout_constraintTop_toBottomOf="@id/estimate_customer_postal_code" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/estimate_checkboxes_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/customer_info_section"
+            app:layout_constraintTop_toBottomOf="@id/customer_info_section">
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_single_storey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:text="@string/single_storey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_main_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:clickable="false"
+                android:text="@string/main_floor"
+                app:layout_constraintStart_toEndOf="@+id/estimate_checkbox_single_storey"
+                app:layout_constraintTop_toTopOf="@+id/estimate_checkbox_single_storey" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_through_wood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:clickable="false"
+                android:text="@string/through_wood"
+                app:layout_constraintStart_toEndOf="@+id/estimate_checkbox_main_floor"
+                app:layout_constraintTop_toTopOf="@+id/estimate_checkbox_main_floor" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_two_storey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/two_storey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_single_storey"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_single_storey"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_basement"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/basement"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_main_floor"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_main_floor" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_through_concrete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/throughconcrete"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_through_wood"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_through_wood" />
+
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_inside_wall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/inside_wall"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_two_storey"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_two_storey" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_outside_wall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/outside_wall"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_main_floor"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_basement" />
+
+            <CheckBox
+                android:id="@+id/estimate_checkbox_cross_corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="@string/cross_corner"
+                app:layout_constraintStart_toStartOf="@+id/estimate_checkbox_through_wood"
+                app:layout_constraintTop_toBottomOf="@+id/estimate_checkbox_through_concrete" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/estimate_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/estimate_checkboxes_section"
+            app:layout_constraintTop_toBottomOf="@id/estimate_checkboxes_section">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/quantity_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/item_code_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="start"
+                android:text="@string/product_name_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:text="@string/description_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/unit_price_header"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/price_header"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/estimate_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/estimate_header"
+            app:layout_constraintTop_toBottomOf="@id/estimate_header"
+            tools:ignore="NestedScrolling" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

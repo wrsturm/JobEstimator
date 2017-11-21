@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditorActivity">
+
+    <item
+        android:id="@+id/action_preferences"
+        android:title="@string/change_preferences"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_save_estimate"
+        android:title="@string/action_save_estimate"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_email_estimate"
+        android:title="@string/action_email_estimate"
+        app:showAsAction="never" />
+
+</menu>

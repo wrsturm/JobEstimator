@@ -1,0 +1,354 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <EditText
+            android:id="@+id/installation_date_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/installation_date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/job_number_edit_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/job_number_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:hint="@string/job_number_hint"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/installation_date_edit_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/customer_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/customer_name_hint"
+            android:inputType="textCapWords|textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/date_edit_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/installation_date_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/installation_date_edit_text" />
+
+        <EditText
+            android:id="@+id/date_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:hint="@string/todays_date_hint"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/customer_name_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/job_number_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/job_number_edit_text" />
+
+        <EditText
+            android:id="@+id/address_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/job_site_address_hint"
+            android:inputType="textCapWords|textPostalAddress"
+            app:layout_constraintEnd_toStartOf="@+id/res_phone_number_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/customer_name_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/customer_name_edit_text" />
+
+
+        <EditText
+            android:id="@+id/res_phone_number_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:hint="@string/home_phone_hint"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/address_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/date_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/date_edit_text"
+            tools:ignore="NestedWeights" />
+
+        <EditText
+            android:id="@+id/city_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/city_hint"
+            android:inputType="textCapWords|textPostalAddress"
+            app:layout_constraintEnd_toStartOf="@+id/province_edit_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/address_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/address_edit_text" />
+
+        <EditText
+            android:id="@+id/province_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/province_hint"
+            android:inputType="textCapWords|textPostalAddress"
+            app:layout_constraintEnd_toStartOf="@+id/business_phone_number_edit_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/city_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/address_edit_text" />
+
+        <EditText
+            android:id="@+id/business_phone_number_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/bus_phone_hint"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/province_edit_text"
+            app:layout_constraintStart_toStartOf="@+id/res_phone_number_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/res_phone_number_edit_text" />
+
+        <EditText
+            android:id="@+id/postal_code_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/postal_code_hint"
+            android:inputType="textCapCharacters"
+            app:layout_constraintEnd_toStartOf="@+id/cell_phone_number_edit_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/city_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/city_edit_text" />
+
+        <EditText
+            android:id="@+id/discount_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/discount"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toStartOf="@+id/email_edit_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@+id/postal_code_edit_text"
+            app:layout_constraintTop_toBottomOf="@+id/postal_code_edit_text" />
+
+        <EditText
+            android:id="@+id/cell_phone_number_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/cell_phone_hint"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/postal_code_edit_text"
+            app:layout_constraintStart_toStartOf="@id/business_phone_number_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/business_phone_number_edit_text" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/discount_edit_text"
+            app:layout_constraintStart_toStartOf="@id/cell_phone_number_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/cell_phone_number_edit_text" />
+
+
+        <TextView
+            android:id="@+id/construction_heading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/construction_type"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/discount_edit_text"
+            app:layout_constraintTop_toBottomOf="@id/discount_edit_text" />
+
+        <CheckBox
+            android:id="@+id/single_storey_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/single_storey"
+            app:layout_constraintEnd_toStartOf="@+id/two_storey_checkbox"
+            app:layout_constraintStart_toStartOf="@id/construction_heading"
+            app:layout_constraintTop_toBottomOf="@+id/construction_heading" />
+
+        <CheckBox
+            android:id="@+id/main_floor_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/main_floor"
+            app:layout_constraintStart_toStartOf="@id/single_storey_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/single_storey_checkbox" />
+
+        <CheckBox
+            android:id="@+id/inside_wall_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/inside_wall"
+            app:layout_constraintStart_toStartOf="@+id/main_floor_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/main_floor_checkbox" />
+
+        <CheckBox
+            android:id="@+id/through_wood_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/through_wood"
+            app:layout_constraintStart_toStartOf="@id/inside_wall_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/inside_wall_checkbox" />
+
+        <CheckBox
+            android:id="@+id/cross_corner_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/cross_corner"
+            app:layout_constraintStart_toStartOf="@+id/through_wood_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/through_wood_checkbox" />
+
+        <CheckBox
+            android:id="@+id/two_storey_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/two_storey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/single_storey_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/construction_heading" />
+
+        <CheckBox
+            android:id="@+id/through_concrete_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/throughconcrete"
+            app:layout_constraintStart_toStartOf="@id/outside_wall_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/outside_wall_checkbox" />
+
+        <CheckBox
+            android:id="@+id/basement_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/basement"
+            app:layout_constraintStart_toStartOf="@id/two_storey_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/two_storey_checkbox" />
+
+        <CheckBox
+            android:id="@+id/outside_wall_checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/outside_wall"
+            app:layout_constraintStart_toStartOf="@id/basement_checkbox"
+            app:layout_constraintTop_toBottomOf="@id/basement_checkbox" />
+
+        <TextView
+            android:id="@+id/products_selected_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/products_selected_header"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/single_storey_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/cross_corner_checkbox" />
+
+
+        <TextView
+            android:id="@+id/products_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/products_selected_hint"
+            app:layout_constraintStart_toStartOf="@id/products_selected_header"
+            app:layout_constraintTop_toBottomOf="@id/products_selected_header" />
+
+        <TextView
+            android:id="@+id/pictures_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/job_pictures"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@id/products_selected"
+            app:layout_constraintTop_toBottomOf="@id/products_selected" />
+
+        <TextView
+            android:id="@+id/job_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/picture_files_id"
+            app:layout_constraintStart_toStartOf="@id/pictures_header"
+            app:layout_constraintTop_toBottomOf="@id/pictures_header"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <EditText
+            android:id="@+id/job_instructions_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:hint="@string/job_instructions_hint"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minLines="3"
+            android:scrollbars="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/job_pictures"
+            app:layout_constraintTop_toBottomOf="@+id/job_pictures" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

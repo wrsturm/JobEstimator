@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thfireplaces.JobEstimator">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent=" @xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.BrandedLaunch"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EditJob"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductDetail"
+            android:screenOrientation="portrait" />
+        <!-- android:parentActivityName=".Product" -->
+        <activity
+            android:name=".ViewEstimate"
+            android:screenOrientation="portrait" />
+        <!-- android:parentActivityName=".Product" -->
+
+        <provider
+            android:name=".data.JobEstimatorProvider"
+            android:authorities="com.thfireplaces.jobestimator"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.thfireplaces.JobEstimator.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+        <activity
+            android:name=".Supplier"
+            android:label="@string/title_activity_supplier"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.BrandedLaunch.NoActionBar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settings_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.thfireplaces.JobEstimator.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TakePicture"
+            android:parentActivityName=".EditJob"
+            />
+
+    </application>
+
+</manifest>

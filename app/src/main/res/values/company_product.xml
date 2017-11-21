@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Filler until the produts can be read in from the network or file -->
+    <string-array name="accessories">
+        <item>Select from the following</item>
+        <item>Gas Fireplace / Stove / Insert</item>
+        <item>Vertical Vent</item>
+        <item>Horizontal Vent</item>
+        <item>Snorkel Kit</item>
+        <item>Liner Kit</item>
+        <item>Logs</item>
+        <item>Grills</item>
+        <item>Trim Kit</item>
+        <item>Fan Kit</item>
+        <item>Flashing Standard</item>
+        <item>Flashing Custom</item>
+        <item>Electrical</item>
+        <item>Gas Line</item>
+        <item>Permit</item>
+        <item>Wood Fireplace / Stove</item>
+        <item>XKI Interior Kit</item>
+        <item>XKE Exterior Kit</item>
+        <item>Chimney Package</item>
+        <item>Chase Cap</item>
+        <item>Elbows</item>
+    </string-array>
+
+
+</resources>
