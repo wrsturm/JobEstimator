@@ -2,6 +2,14 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("TIMBERHEARTH_KEYSTORE_FILE"))
+            storePassword System.getenv("TIMBERHEARTH_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("TIMBERHEARTH_KEY_ALIAS")
+            keyPassword System.getenv("TIMBERHEARTH_KEYALIAS_PASSWORD")
+        }
+    }
     compileSdkVersion 27
     buildToolsVersion '26.0.3'
     defaultConfig {
@@ -16,6 +24,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     apply plugin: 'kotlin-android-extensions'
@@ -33,7 +42,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-
 }
 
 repositories {
