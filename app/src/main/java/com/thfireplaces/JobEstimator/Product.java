@@ -336,7 +336,7 @@ public class Product extends AppCompatActivity implements LoaderManager.LoaderCa
         builder.setMessage(getString(R.string.delete) + " " + selections.toString());
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked the "Delete" button, so delete the pet.
+                // User clicked the "Delete" button, so delete the product selections.
                 deleteSelections();
                 get_job_selection();
             }
@@ -344,7 +344,7 @@ public class Product extends AppCompatActivity implements LoaderManager.LoaderCa
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Cancel" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the product selections.
                 if (dialog != null) {
                     dialog.dismiss();
                 }
@@ -363,14 +363,14 @@ public class Product extends AppCompatActivity implements LoaderManager.LoaderCa
         builder.setMessage(getString(R.string.select) + " " + productMaterial);
         builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                // User clicked the "Delete" button, so delete the pet.
+                // User clicked the "Delete" button, so delete the product selections.
                 addToSelections();
             }
         });
         builder.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 // User clicked the "Cancel" button, so dismiss the dialog
-                // and continue editing the pet.
+                // and continue editing the product selections.
                 if (dialog != null) {
                     dialog.dismiss();
                 }

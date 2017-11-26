@@ -1,6 +1,5 @@
 package com.thfireplaces.JobEstimator;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentUris;
@@ -37,7 +36,8 @@ import java.util.regex.Pattern;
 import static android.os.Environment.DIRECTORY_DOCUMENTS;
 import static android.os.Environment.DIRECTORY_PICTURES;
 import static android.util.Log.v;
-import static android.widget.CompoundButton.*;
+import static android.widget.CompoundButton.OnCheckedChangeListener;
+import static android.widget.CompoundButton.OnTouchListener;
 
 public class EditJob extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     private static final String LOG_TAG = EditJob.class.getSimpleName();
@@ -109,7 +109,6 @@ public class EditJob extends AppCompatActivity implements LoaderManager.LoaderCa
     private CheckBox cbThroughWood;
     private CheckBox cbThroughConcrete;
 
-    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Reset the screen back to regular theme

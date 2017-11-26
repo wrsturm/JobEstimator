@@ -128,10 +128,12 @@ public class ViewEstimate extends AppCompatActivity implements LoaderManager.Loa
         String email = Utils.getJobEmail(this, uri);
         String emailMessage = "The following is the estimate for job number " + mPrefixJobNum +
                 ".  Please take a moment to review and inform us of any discrepancies.";
+        Log.v("emailEstimate: ", USERNAME + " " + EMAIL_CENTRAL + " " + email);
+
         try {
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {email});
-            emailIntent.putExtra(Intent.EXTRA_BCC, new String[] {EMAIL_CENTRAL});
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
+            emailIntent.putExtra(Intent.EXTRA_BCC, new String[]{EMAIL_CENTRAL});
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Estimate for job: " + mPrefixJobNum);
             emailIntent.setType("application/pdf");
             emailIntent.putExtra(Intent.EXTRA_TEXT, emailMessage);
