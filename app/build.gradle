@@ -1,16 +1,9 @@
+//noinspection AccidentalOctal
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file(System.getenv("TIMBERHEARTH_KEYSTORE_FILE"))
-            storePassword System.getenv("TIMBERHEARTH_KEYSTORE_PASSWORD")
-            keyAlias System.getenv("TIMBERHEARTH_KEY_ALIAS")
-            keyPassword System.getenv("TIMBERHEARTH_KEYALIAS_PASSWORD")
-        }
-    }
     compileSdkVersion 27
     buildToolsVersion '26.0.3'
     defaultConfig {
@@ -18,30 +11,38 @@ android {
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    if (project.hasProperty("SignProject.signing")
+            && new File(project.property("SignProject.signing") + ".gradle").exists()) {
+        apply from: project.property("SignProject.signing") + ".gradle"
+    }
     buildTypes {
+        debug {
+            debuggable true
+        }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
     }
+
+
 }
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:27.0.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:design:27.0.1'
-    compile 'com.itextpdf:itext-pdfa:5.5.12'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:design:27.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 
 repositories {
