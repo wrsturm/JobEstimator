@@ -70,7 +70,7 @@ final public class Utils {
         if (jobCursor != null) {
             if (jobCursor.moveToFirst()) {
                 String mSelections = jobCursor.getString(jobCursor.getColumnIndexOrThrow(JobTable.COL_PRODUCT_SELECTIONS));
-                if (!TextUtils.isEmpty(mSelections)) mSelections = mSelections.trim();
+                if (!mSelections.isEmpty()) mSelections = mSelections.trim();
 
                 materialCodes.clear();
                 if (!TextUtils.isEmpty(mSelections)) {
@@ -108,7 +108,7 @@ final public class Utils {
         return pictures;
     }
 
-    public static String getJobEmail(Context context, Uri uri) {
+    static String getJobEmail(Context context, Uri uri) {
         String custEmailAddress = "";
         String[] projection = {
                 JobTable._ID,
@@ -145,7 +145,7 @@ final public class Utils {
         }
     }
 
-    public static void setListViewHeightBasedOnItems(ListView listView) {
+    static void setListViewHeightBasedOnItems(ListView listView) {
 
         ListAdapter listAdapter = listView.getAdapter();
         if (listAdapter != null) {
