@@ -505,14 +505,6 @@ public class EditJob extends AppCompatActivity implements LoaderManager.LoaderCa
         }
     }
 
-/*
-    private String getCurrentDate() {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat mdformat = new SimpleDateFormat("yyyy-MM-dd ", Locale.CANADA);
-        return mdformat.format(calendar.getTime());
-    }
-*/
-
     private void resetInputFields() {
         etInsDate.setText("");
         etJobNum.setText("");
