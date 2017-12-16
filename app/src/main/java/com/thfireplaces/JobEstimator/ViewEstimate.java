@@ -110,15 +110,16 @@ public class ViewEstimate extends AppCompatActivity implements LoaderManager.Loa
      * INSTALLATION_UNIT_PRICE
      * INSTALLATION_DEFAULT_UNITS
      * EMAIL_CENTRAL
+     * USERNAME
      */
     private void readSharedPref() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        TAX_RATE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_tax_key), "0.05"));
-        PERMIT_PRICE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_permit_key), "250.00"));
-        INSTALLATION_UNIT_PRICE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_installation_price_key), "125.00"));
-        INSTALLATION_DEFAULT_UNITS = sharedPref.getString(String.valueOf(R.string.settings_installation_default_units_key), "5");
-        EMAIL_CENTRAL = sharedPref.getString(String.valueOf(R.string.settings_central_email_key), "Terry.Hagen@Timberhearth.com");
-        USERNAME = sharedPref.getString(String.valueOf(R.string.settings_user_name_key), "");
+        TAX_RATE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_tax_key), getString(R.string.settings_tax_default)));
+        PERMIT_PRICE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_permit_key), getString(R.string.settings_permit_default)));
+        INSTALLATION_UNIT_PRICE = Double.valueOf(sharedPref.getString(String.valueOf(R.string.settings_installation_price_key), getString(R.string.settings_installation_price_default)));
+        INSTALLATION_DEFAULT_UNITS = sharedPref.getString(String.valueOf(R.string.settings_installation_units_key), getString(R.string.settings_installation_units_default));
+        EMAIL_CENTRAL = sharedPref.getString(String.valueOf(R.string.settings_central_email_key), getString(R.string.settings_central_email_default));
+        USERNAME = sharedPref.getString(String.valueOf(R.string.settings_user_name_key), getString(R.string.settings_user_name_default));
     }
 
     /**
