@@ -3,35 +3,35 @@
     android:title="@string/settings_title" >
 
     <EditTextPreference
-        android:defaultValue="0.05"
+        android:defaultValue="@string/settings_central_email_default"
         android:inputType="textEmailAddress"
         android:key="@string/settings_central_email_key"
         android:selectAllOnFocus="true"
         android:title="@string/settings_central_email_title" />
 
     <EditTextPreference
-        android:defaultValue="125.00"
+        android:defaultValue="@string/settings_installation_units_default"
         android:inputType="numberDecimal"
-        android:key="@string/settings_installation_default_units_key"
+        android:key="@string/settings_installation_units_key"
         android:selectAllOnFocus="true"
-        android:title="@string/settings_installation_default_units_title" />
+        android:title="@string/settings_installation_units_title" />
 
     <EditTextPreference
-        android:defaultValue="125.00"
+        android:defaultValue="@string/settings_installation_price_default"
         android:inputType="numberDecimal"
         android:key="@string/settings_installation_price_key"
         android:selectAllOnFocus="true"
         android:title="@string/settings_installation_price_title" />
 
     <EditTextPreference
-        android:defaultValue="250.00"
+        android:defaultValue="@string/settings_permit_default"
         android:inputType="numberDecimal"
         android:key="@string/settings_permit_key"
         android:selectAllOnFocus="true"
         android:title="@string/settings_permit_title" />
 
     <EditTextPreference
-        android:defaultValue="0.05"
+        android:defaultValue="@string/settings_tax_default"
         android:inputType="numberDecimal"
         android:key="@string/settings_tax_key"
         android:selectAllOnFocus="true"
