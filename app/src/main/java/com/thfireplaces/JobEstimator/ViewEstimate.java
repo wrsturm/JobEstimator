@@ -110,7 +110,6 @@ public class ViewEstimate extends AppCompatActivity implements LoaderManager.Loa
      * INSTALLATION_UNIT_PRICE
      * INSTALLATION_DEFAULT_UNITS
      * EMAIL_CENTRAL
-     * USERNAME
      */
     private void readSharedPref() {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
